@@ -9,33 +9,33 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <script>
-        (function (n, i, a, v, s, c, x, z) {
-            x = window.AwsNexusTelemetry = { q: [], n, i, a, v, c };
-            window[n] = function (c, p) {
-                x.q.push({ c, p });
-            };
-            z = document.createElement('script');
-            z.async = true;
-            z.src = s;
-            document.head.insertBefore(
-                z,
-                document.getElementsByTagName('script')[0]
-            );
-        })(
-            'nexus',
-            '36ee329e-53d9-43e9-b5dc-f45dcc983840',
-            'ht-bb-test-2',
-            '1.0.0',
-            'https://duz7138yxaitq.cloudfront.net/assets/rum-javascript-telemetry.js',
-            {
-                identityPoolId: 'us-west-2:9c184be2-1057-4d57-9bb7-ebd4ba3c293c',
-                endpoint: 'https://dataplane.us-west-2.gamma.rum.aws.dev'
-            }
-        );
+      (function (n, i, a, v, s, c, x, z) {
+          x = window.AwsNexusTelemetry = { q: [], n, i, a, v, c };
+          window[n] = function (c, p) {
+              x.q.push({ c, p });
+          };
+          z = document.createElement('script');
+          z.async = true;
+          z.src = s;
+          document.head.insertBefore(
+              z,
+              document.getElementsByTagName('script')[0]
+          );
+      })(
+          'nexus',
+          '463e420d-bfd7-416c-85c6-c50da87920c0',
+          'ht-bb-test-1',
+          '1.0.0',
+          'https://duz7138yxaitq.cloudfront.net/assets/rum-javascript-telemetry.js',
+          {
+              identityPoolId: 'us-west-2:7ba2dfdd-3e7e-4324-b410-b01ee82d3d94',
+              endpoint: 'https://dataplane.us-west-2.gamma.rum.aws.dev'
+          }
+      );
     </script>
     <script>
-nexus('configurePlugin', {pluginId: "dom_event_plugin", config: [{event:"click", element:document}]});
-</script>
+      nexus('configurePlugin', {pluginId: "dom_event_plugin", config: [{event:"click", element:document}]});
+    </script>
   </head>
   <body>
     <section class="page-header">
