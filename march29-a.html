@@ -8,31 +8,31 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-<script>
-    (function (n, i, a, v, s, c, x, z) {
-        x = window.AwsNexusTelemetry = { q: [], n, i, a, v, c };
-        window[n] = function (c, p) {
-            x.q.push({ c, p });
-        };
-        z = document.createElement('script');
-        z.async = true;
-        z.src = s;
-        document.head.insertBefore(
-            z,
-            document.getElementsByTagName('script')[0]
+    <script>
+        (function (n, i, a, v, s, c, x, z) {
+            x = window.AwsNexusTelemetry = { q: [], n, i, a, v, c };
+            window[n] = function (c, p) {
+                x.q.push({ c, p });
+            };
+            z = document.createElement('script');
+            z.async = true;
+            z.src = s;
+            document.head.insertBefore(
+                z,
+                document.getElementsByTagName('script')[0]
+            );
+        })(
+            'nexus',
+            '36ee329e-53d9-43e9-b5dc-f45dcc983840',
+            'ht-bb-test-2',
+            '1.0.0',
+            'https://duz7138yxaitq.cloudfront.net/assets/rum-javascript-telemetry.js',
+            {
+                identityPoolId: 'us-west-2:9c184be2-1057-4d57-9bb7-ebd4ba3c293c',
+                endpoint: 'https://dataplane.us-west-2.gamma.rum.aws.dev'
+            }
         );
-    })(
-        'nexus',
-        'c10fed4a-0305-4b7b-826b-f649726961f7',
-        'rbhogi-github-march29',
-        '1.0.0',
-        'https://dbq1zc0vj7pzk.cloudfront.net/assets/rum-javascript-telemetry.js',
-        {
-            identityPoolId: 'us-west-2:43adec44-2bb7-489b-ba19-ce35cfde7d59',
-            endpoint: 'https://dataplane.us-west-2.beta.rum.aws.dev'
-        }
-    );
-</script>
+    </script>
     <script>
 nexus('configurePlugin', {pluginId: "dom_event_plugin", config: [{event:"click", element:document}]});
 </script>
