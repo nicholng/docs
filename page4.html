@@ -23,16 +23,21 @@
           );
       })(
           'nexus',
-          '463e420d-bfd7-416c-85c6-c50da87920c0',
-          'ht-bb-test-1',
+          'f5f743c8-98d0-487a-b171-0e3a699fd65a',
+          'testAppNazanich',
           '1.0.0',
           'https://duz7138yxaitq.cloudfront.net/assets/rum-javascript-telemetry.js',
           {
-              identityPoolId: 'us-west-2:7ba2dfdd-3e7e-4324-b410-b01ee82d3d94',
+              identityPoolId: 'us-west-2:06438173-6c99-499a-ad2e-d9e6a9349ddf',
+              guestRoleArn: 'arn:aws:iam::750664202209:role/Nexus-Monitor-us-west-2-750664202209-6875240348161-Unauth'
               endpoint: 'https://dataplane.us-west-2.gamma.rum.aws.dev'
+              pagesToExclude: [/https:\/\/nazanich.github.io\/docs\/page1.html/]
           }
       );
-    </script>
+  </script>
+  <script>
+    nexus('configurePlugin', {pluginId: "dom_event_plugin", config: [{event:"click", element:document});
+  </script>
   </head>
   <body>
     <section class="page-header">
