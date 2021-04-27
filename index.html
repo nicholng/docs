@@ -33,13 +33,13 @@
               guestRoleArn: 'arn:aws:iam::750664202209:role/Nexus-Monitor-us-west-2-750664202209-6875240348161-Unauth',
               endpoint: 'https://dataplane.us-west-2.gamma.rum.aws.dev',
               sessionSampleRate: 1,
-              pagesToInclude: [/https:\/\/nazanich.github.io\/docs\/page1.html/,/https:\/\/nazanich.github.io\/docs\/page3.html/],
+              pagesToExclude: [/https:\/\/nazanich.github.io\/docs\/page1.html/,/https:\/\/nazanich.github.io\/docs\/page3.html/],
           }
       );
-  </script>
-  <script>
-    nexus('configurePlugin', {pluginId: "dom_event_plugin", config: [{event:"click", element:document}]});
-  </script>
+    </script>
+    <script>
+      nexus('configurePlugin', {pluginId: "dom_event_plugin", config: [{event:"click", element:document}]});
+    </script>
   </head>
   <body>
     <section class="page-header">
