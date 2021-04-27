@@ -9,11 +9,15 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <script>
-      (function (n, i, a, v, s, c, x, z) {
-          x = window.AwsNexusTelemetry = { q: [], n, i, a, v, c };
+      <script>
+      (function (n, i, a, v, r, s, c, x, z) {
+          // The global object that the Nexus client will use to read configuration and commands.
+          x = window.AwsNexusTelemetry = { q: [], n, i, a, v, r, c };
+          // The Nexus client's JavaScript API
           window[n] = function (c, p) {
               x.q.push({ c, p });
           };
+          // Asynchronously load the script and ensure execution priority
           z = document.createElement('script');
           z.async = true;
           z.src = s;
@@ -27,7 +31,7 @@
           'testAppNazanich',
           '1.0.0',
           'us-west-2'
-          'https://dkseqfdni9c7v.cloudfront.net/assets/rum-javascript-telemetry.js',
+          'https://d1ktxyteejjrbw.cloudfront.net/assets/rum-javascript-telemetry.js',
           {
               identityPoolId: 'us-west-2:06438173-6c99-499a-ad2e-d9e6a9349ddf',
               guestRoleArn: 'arn:aws:iam::750664202209:role/Nexus-Monitor-us-west-2-750664202209-6875240348161-Unauth',
