@@ -9,33 +9,33 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <script>
-        (function (n, i, a, v, r, s, c, x, z) {
-            x = window.AwsNexusTelemetry = { q: [], n, i, a, v, r, c };
-            window[n] = function (c, p) {
-                x.q.push({ c, p });
-            };
-            z = document.createElement('script');
-            z.async = true;
-            z.src = s;
-            document.head.insertBefore(
-                z,
-                document.getElementsByTagName('script')[0]
-            );
-        })(
-            'nexus',
-            'f5f743c8-98d0-487a-b171-0e3a699fd65a',
-            'testAppNazanich',
-            '1.0.0',
-            'us-west-2',
-            'https://d1ktxyteejjrbw.cloudfront.net/assets/rum-javascript-telemetry.js',
-            {
-                identityPoolId: 'us-west-2:06438173-6c99-499a-ad2e-d9e6a9349ddf',
-                guestRoleArn: 'arn:aws:iam::750664202209:role/Nexus-Monitor-us-west-2-750664202209-6875240348161-Unauth',
-                endpoint: 'https://dataplane.us-west-2.gamma.rum.aws.dev',
-                sessionSampleRate: 1,
-                pagesToExclude: [/https:\/\/nazanich.github.io\/docs\/page1.html/,/https:\/\/nazanich.github.io\/docs\/page3.html/],
-            }
-        );
+	    (function (n, i, a, v, r, s, c, x, z) {
+		x = window.AwsNexusTelemetry = { q: [], n, i, a, v, r, c };
+		window[n] = function (c, p) {
+		    x.q.push({ c, p });
+		};
+		z = document.createElement('script');
+		z.async = true;
+		z.src = s;
+		document.head.insertBefore(
+		    z,
+		    document.getElementsByTagName('script')[0]
+		);
+	    })(
+		'nexus',
+		'cb11af8b-5042-4532-a1ea-2973e62e6008',
+		'multi-page-app-test',
+		'1.0.0',
+		'us-east-1',
+		'https://d1ktxyteejjrbw.cloudfront.net/assets/rum-javascript-telemetry.js',
+		{
+		    identityPoolId: 'us-east-1:5d645c3e-ad76-4a0b-a692-8d84578bd123',
+		    guestRoleArn: 'arn:aws:iam::750664202209:role/Nexus-Monitor-us-east-1-750664202209-7339849320261-Unauth',
+		    endpoint: 'https://dataplane.us-east-1.gamma.rum.aws.dev',
+		    sessionSampleRate: 1,
+		    pagesToExclude: [/https:\/\/nazanich.github.io\/docs\/page2.html/,/https:\/\/nazanich.github.io\/docs\/page4.html/],
+		}
+	    );
     </script>
     <script>
       nexus('configurePlugin', {pluginId: "dom_event_plugin", config: [{event:"click", element:document}]});
@@ -53,7 +53,7 @@
       <a href="https://nazanich.github.io/docs/march29-a.html" class="btn">March29-a</a>
       <a href="https://nazanich.github.io/docs/march29-b.html" class="btn">March29-b</a>
       <button style="font-size: x-large;padding: 5px;" onclick="jsError1()">Generate Common JS Error</button>
-      <button style="font-size: x-large;padding: 5px;" onclick="jsError2()">Generate Page JS Error</button>
+      <button style="font-size: x-large;padding: 5px;" onclick="jsError2()">Generate Page specific JS Error</button>
       <button style="font-size: x-large;padding: 5px;" onclick="httpError()">Generate HTTP Error</button>
     </section>
     <section class="page-header">
@@ -100,10 +100,10 @@
 			throw "JS Error 1";
 		}
     function jsError2() {
-			throw "Index page error";
+			throw "March page error";
 		}
 		function httpError() {
-			fetch("https://ww.nyksdfs.com");
+			fetch("https://ww.marchcerserse.com");
 		}
 	</script>
 
