@@ -52,6 +52,9 @@
       <a href="https://nazanich.github.io/docs/page5.html" class="btn">Page 5</a>
       <a href="https://nazanich.github.io/docs/march29-a.html" class="btn">March29-a</a>
       <a href="https://nazanich.github.io/docs/march29-b.html" class="btn">March29-b</a>
+      <button style="font-size: x-large;padding: 5px;" onclick="jsError1()">Generate Common JS Error</button>
+      <button style="font-size: x-large;padding: 5px;" onclick="jsError2()">Generate Page Specific JS Error</button>
+      <button style="font-size: x-large;padding: 5px;" onclick="httpError()">Generate HTTP Error</button>
     </section>
     <section class="page-header">
       <h1 class="project-name">11 Best Places to Visit in Scotland</h1>
@@ -94,9 +97,16 @@
       <b>12. Unknown</b><br>
       <img src="https://www.planetware.com/wpimages/2019/02/scotland-best-places-to-visit-fort-williams.jpg"/>
 <script>
-var e = {};
-e.get("a").text = "error on page 2"
-</script>
+		function jsError1() {
+			throw "JS Error 1";
+		}
+    function jsError2() {
+			throw "Page 2 page error";
+		}
+		function httpError() {
+			fetch("https://ww.nyksdfs.com");
+		}
+	</script>
 
     </section>
   </body>
