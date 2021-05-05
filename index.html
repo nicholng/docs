@@ -52,6 +52,9 @@
       <a href="https://nazanich.github.io/docs/page5.html" class="btn">Page 5</a>
       <a href="https://nazanich.github.io/docs/march29-a.html" class="btn">March29-a</a>
       <a href="https://nazanich.github.io/docs/march29-b.html" class="btn">March29-b</a>
+      <button style="font-size: x-large;padding: 5px;" onclick="jsError1()">Generate Common JS Error</button>
+      <button style="font-size: x-large;padding: 5px;" onclick="jsError2()">Generate Page JS Error</button>
+      <button style="font-size: x-large;padding: 5px;" onclick="httpError()">Generate HTTP Error</button>
     </section>
     <section class="main-content">
       <h3>
@@ -98,8 +101,16 @@ $ git checkout gh-pages
     </section>
 
   <script>
-    document.getElementById("this is going to cause an error").innerHTML
-  </script>
+		function jsError1() {
+			throw "JS Error 1";
+		}
+    function jsError2() {
+			throw "Index page error";
+		}
+		function httpError() {
+			fetch("https://ww.nyksdfs.com");
+		}
+	</script>
 
   </body>
 </html>
