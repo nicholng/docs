@@ -8,35 +8,35 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <script>
-	    (function (n, i, a, v, r, s, c, x, z) {
-		x = window.AwsNexusTelemetry = { q: [], n, i, a, v, r, c };
-		window[n] = function (c, p) {
-		    x.q.push({ c, p });
-		};
-		z = document.createElement('script');
-		z.async = true;
-		z.src = s;
-		document.head.insertBefore(
-		    z,
-		    document.getElementsByTagName('script')[0]
-		);
-	    })(
-		'nexus',
-		'cb11af8b-5042-4532-a1ea-2973e62e6008',
-		'multi-page-app-test',
-		'1.0.0',
-		'us-east-1',
-		'https://d1ktxyteejjrbw.cloudfront.net/assets/rum-javascript-telemetry.js',
-		{
-		    identityPoolId: 'us-east-1:5d645c3e-ad76-4a0b-a692-8d84578bd123',
-		    guestRoleArn: 'arn:aws:iam::750664202209:role/Nexus-Monitor-us-east-1-750664202209-7339849320261-Unauth',
-		    endpoint: 'https://dataplane.us-east-1.gamma.rum.aws.dev',
-		    sessionSampleRate: 1,
-		    pagesToExclude: [/https:\/\/nazanich.github.io\/docs\/page3.html/,/https:\/\/nazanich.github.io\/docs\/page4.html/],
-		}
-	    );
-  </script>
+   <script>
+    (function (n, i, a, v, r, s, c, x, z) {
+        x = window.AwsNexusTelemetry = { q: [], n, i, a, v, r, c };
+        window[n] = function (c, p) {
+            x.q.push({ c, p });
+        };
+        z = document.createElement('script');
+        z.async = true;
+        z.src = s;
+        document.head.insertBefore(
+            z,
+            document.getElementsByTagName('script')[0]
+        );
+    })(
+        'nexus',
+        '961ffcab-9460-4c36-ae03-beedc8e7c08f',
+        'ctranam',
+        '1.0.0',
+        'us-west-2',
+        'https://d1ktxyteejjrbw.cloudfront.net/assets/rum-javascript-telemetry.js',
+        {
+            identityPoolId: 'us-west-2:37bb1a80-5d7a-4d18-ad60-f205dad0de66',
+            guestRoleArn: 'arn:aws:iam::750664202209:role/Nexus-Monitor-us-west-2-111563733690-3500803903261-Unauth',
+            endpoint: 'https://dataplane.us-west-2.prod.rum.aws.dev',
+            sessionSampleRate: 100,
+            pageIdFormat: 'PATH_AND_HASH'
+        }
+    );
+</script>
   </head>
   <body>
     <section class="page-header">
