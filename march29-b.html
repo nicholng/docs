@@ -23,7 +23,9 @@
       <a href="https://nazanich.github.io/docs/march29-b.html" class="btn">March29-b</a>
       <button style="font-size: x-large;padding: 5px;" onclick="jsError1()">Generate Common JS Error</button>
       <button style="font-size: x-large;padding: 5px;" onclick="jsError2()">Generate Page specific JS Error</button>
-      <button style="font-size: x-large;padding: 5px;" onclick="httpError()">Generate HTTP Error</button>
+      <button style="font-size: x-large;padding: 5px;" onclick="http500Error()">Generate HTTP 500 Error</button>
+      <button style="font-size: x-large;padding: 5px;" onclick="http400Error()">Generate HTTP 400 Error</button>
+      <button style="font-size: x-large;padding: 5px;" onclick="http404Error()">Generate HTTP 404 Error</button>
     </section>
     <section class="page-header">
       <h1 class="project-name">11 Best Places to Visit in Scotland</h1>
@@ -71,8 +73,14 @@
     function jsError2() {
 			throw "March page error";
 		}
-		function httpError() {
-			fetch("https://ww.marchcerserse.com");
+		function http500Error() {
+			fetch("https://httpstat.us/500");
+		}
+		function http400Error() {
+			fetch("https://httpstat.us/400");
+		}
+		function http404Error() {
+			fetch("https://httpstat.us/404");
 		}
 	</script>
 
